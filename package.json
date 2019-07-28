@@ -1,0 +1,19 @@
+{
+  "name": "gridsome-transformer-yamlNetlify",
+  "description": "Netlify compatible Yaml transformer for Gridsome",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "keywords": [
+    "gridsome",
+    "gridsome-plugin",
+    "gridsome-transformer",
+    "netlify",
+    "netlify-cms",
+    "yaml",
+  ],
+  "dependencies": {
+    "flat": "^4.1.0",
+    "js-yaml": "^3.13.1"
+  }
+}
