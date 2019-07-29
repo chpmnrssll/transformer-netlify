@@ -2,7 +2,7 @@
   "name": "gridsome-transformer-yamlNetlify",
   "author": {
     "name": "Russell Chapman",
-    "url": "chpmnrssll.github.io",
+    "url": "chpmnrssll.github.io"
   },
   "version": "1.0.0",
   "license": "MIT",
@@ -12,7 +12,7 @@
     "gridsome-transformer",
     "netlify",
     "netlify-cms",
-    "yaml",
+    "yaml"
   ],
   "description": "Netlify compatible Yaml transformer for Gridsome",
   "repository": "github:chpmnrssll/transformer-yamlNetlify",
