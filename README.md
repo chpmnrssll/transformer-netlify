@@ -8,16 +8,10 @@
 
 __*Do not install the official '@gridsome/transformer-yaml' package.*__
 
-Until I get to registering this package, you can install this GitHub repository directly from yarn or npm:
+- `yarn add gridsome-transformer-netlify`
+- `npm install gridsome-transformer-netlify`
 
-```
-$ yarn add https://github.com/chpmnrssll/transformer-netlify
-```
-or
-```
-$ npm install https://github.com/chpmnrssll/transformer-netlify
-```
-## How To Use
+## Usage
 
 1. Add the transformer plugin and any YAML data sources to your `gridsome-config.js` file:
 ```
@@ -40,7 +34,7 @@ module.exports = {
 }
 ```
 
-2. Set the media and public folders in `config.yml`. (*compatible with gridsome-plugin-netlify-cms*)
+2. Set the media and public folders in your `config.yml`:
 ```
 media_folder: "/static/assets/images"
 public_folder: "/assets/images"
@@ -105,7 +99,7 @@ In your `<template>`:
 ```
 
 
-## What, Why, and How
+## About
 
 This transformer changes the path of all YAML fields with the key `image`, to the relative path (*from `/src/pages`*) of the `/static` directory.
 
