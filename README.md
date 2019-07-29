@@ -6,20 +6,17 @@
 
 ## Install
 
-Do not install the official '@gridsome/transformer-yaml' package. Clone this repo to the `/src` directory. From your project root:
-```
-cd src/
-git clone https://github.com/chpmnrssll/transformer-yamlNetlify.git
-```
+__*Do not install the official '@gridsome/transformer-yaml' package.*__
 
-Then add a local package to your dependencies in `package.json`:
+Until I get to registering this package, you can install this GitHub repository directly from yarn or npm:
+
 ```
-"gridsome-transformer-yamlNetlify": "./src/transformer-yamlNetlify",
+$ yarn add https://github.com/chpmnrssll/transformer-yamlNetlify
 ```
-
-Finally run `yarn` or `npm install` to install the local package.
-
-
+or
+```
+$ npm install https://github.com/chpmnrssll/transformer-yamlNetlify
+```
 ## How To Use
 
 1. Add the transformer plugin and any YAML data sources to your `gridsome-config.js` file:
@@ -73,7 +70,7 @@ query Home {
 </page-query>
 ```
 
-In this example `$page.home.edges[0].node.section1.image` would contain a `<g-image>` compatible image src. The example YAML file might look something like this:
+In this example `$page.home.edges[0].node.section1.image` would contain a `<g-image>` compatible image src. The YAML file might look something like this:
 ```
 section1:
   header: Section 1 Header text
@@ -113,9 +110,9 @@ In your `<template>`:
 This transformer changes the path of all YAML fields with the key `image`, to the relative path (*from `/src/pages`*) of the `/static` directory.
 
 - Netlify-CMS image widget outputs a path with a leading `/`.
-- Gridsome `<g-image>` requires a relative image src path.
+- Gridsome `<g-image>` requires a relative path for the image src.
 
-Using this custom transformer plugin to change the image path **before** it's inserted into GraphQL allows `<g-image>` to function correctly with the image paths generated from Netlify-CMS. Image previews in the Netlify-CMS dashboard should work correctly as well.
+Using this custom transformer plugin to change the image path __*before*__ it's inserted into GraphQL allows `<g-image>` to function correctly with the image paths generated from Netlify-CMS. Image previews in the Netlify-CMS dashboard should work correctly as well.
 
 
 ## Caveats
@@ -123,4 +120,8 @@ Using this custom transformer plugin to change the image path **before** it's in
 - Limited to components in the `/src/pages` directory.
 - Only works with Gridsome page-queries, not static-queries.
 - Must use the `/static` directory so images are available in the same location for the image widget preview.
-- ???
+
+
+## Todo
+
+- Correctly parse Yaml from Netlify-CMS markdown widget with [marked](https://www.npmjs.com/package/marked).
