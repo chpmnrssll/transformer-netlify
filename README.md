@@ -1,6 +1,6 @@
-# gridsome-transformer-yamlNetlify
+# gridsome-transformer-netlify
 
-> Netlify-CMS image to g-image compatible YAML transformer for Gridsome
+> Netlify-CMS image widget to g-image compatible YAML transformer for Gridsome
 
 <small>*Tested with Gridsome v0.6.6*</small>
 
@@ -11,11 +11,11 @@ __*Do not install the official '@gridsome/transformer-yaml' package.*__
 Until I get to registering this package, you can install this GitHub repository directly from yarn or npm:
 
 ```
-$ yarn add https://github.com/chpmnrssll/transformer-yaml-netlify
+$ yarn add https://github.com/chpmnrssll/transformer-netlify
 ```
 or
 ```
-$ npm install https://github.com/chpmnrssll/transformer-yaml-netlify
+$ npm install https://github.com/chpmnrssll/transformer-netlify
 ```
 ## How To Use
 
@@ -23,11 +23,11 @@ $ npm install https://github.com/chpmnrssll/transformer-yaml-netlify
 ```
 module.exports = {
   transformers:
-    yamlNetlify:{},
+    netlify:{},
   },
   plugins: [
     {
-      use: 'gridsome-transformer-yamlNetlify',
+      use: 'gridsome-transformer-netlify',
     },
     {
       use: '@gridsome/source-filesystem',
