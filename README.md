@@ -11,11 +11,11 @@ __*Do not install the official '@gridsome/transformer-yaml' package.*__
 Until I get to registering this package, you can install this GitHub repository directly from yarn or npm:
 
 ```
-$ yarn add https://github.com/chpmnrssll/transformer-yamlNetlify
+$ yarn add https://github.com/chpmnrssll/transformer-yaml-netlify
 ```
 or
 ```
-$ npm install https://github.com/chpmnrssll/transformer-yamlNetlify
+$ npm install https://github.com/chpmnrssll/transformer-yaml-netlify
 ```
 ## How To Use
 

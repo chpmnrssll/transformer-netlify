@@ -1,5 +1,5 @@
 {
-  "name": "gridsome-transformer-yamlNetlify",
+  "name": "gridsome-transformer-yaml-netlify",
   "author": {
     "name": "Russell Chapman",
     "url": "chpmnrssll.github.io"
@@ -15,7 +15,7 @@
     "yaml"
   ],
   "description": "Netlify compatible Yaml transformer for Gridsome",
-  "repository": "github:chpmnrssll/transformer-yamlNetlify",
+  "repository": "github:chpmnrssll/transformer-yaml-netlify",
   "main": "index.js",
   "dependencies": {
     "flat": "^4.1.0",
