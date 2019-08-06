@@ -7,23 +7,28 @@ class YamlTransformer {
     return ['text/yaml'];
   }
 
+  constructor({config, context}, options) {
+    this.options = {
+      ...options,
+      imageKey: options.imageKey || 'image',
+      markdownKey: options.markdownKey || 'body',
+    };
+  }
+
   parse(content) {
     let data = jsYaml.load(content);
 
-    // flatten simplifies recursively searching child nodes for images
-    const flatData = flatten(data);
+    const flatData = flatten(data); // simplifies recursively searching child nodes
 
     Object.keys(flatData)
-      // only keys that end with '.image'
-      .filter(key => key.lastIndexOf('.image') !== -1)
+      .filter(key => key.lastIndexOf(`.${this.options.imageKey}`) !== -1)
       .forEach(imageKey => {
         // prepending '../../static' to image path gives the relative path from '/src/pages'
         flatData[imageKey] = `../../static${flatData[imageKey]}`;
       });
 
     Object.keys(flatData)
-      // only keys that end with '.body'
-      .filter(key => key.lastIndexOf('.body') !== -1)
+      .filter(key => key.lastIndexOf(`.${this.options.markdownKey}`) !== -1)
       .forEach(bodyKey => {
         flatData[bodyKey] = marked(flatData[bodyKey]);
       });

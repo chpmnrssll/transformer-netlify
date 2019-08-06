@@ -14,7 +14,7 @@
     "netlify-cms",
     "yaml"
   ],
-  "description": "Netlify-CMS image widget to g-image compatible YAML transformer for Gridsome",
+  "description": "Netlify-CMS YAML (.yml) transformer for Gridsome",
   "repository": "github:chpmnrssll/transformer-netlify",
   "main": "index.js",
   "dependencies": {
