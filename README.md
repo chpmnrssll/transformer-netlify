@@ -110,39 +110,29 @@ In your `<template>`:
 
 ## About
 
-This transformer changes the path of all YAML fields with the key `image`, to the relative path (*from `/src/pages`*) of the `/static` directory.
+This transformer changes the path of all Netlify-CMS generated YAML image fields, to the relative path (*from `/src/pages`*) of the `/static` directory.
 
 - Netlify-CMS image widget outputs a path with a leading `/`.
 - Gridsome `<g-image>` requires a relative path for the image src.
 
 Using this custom transformer plugin to change the image path __*before*__ it's inserted into GraphQL allows `<g-image>` to function correctly with the image paths generated from Netlify-CMS. Image previews in the Netlify-CMS dashboard should work correctly as well.
 
+[Marked](https://www.npmjs.com/package/marked) is then used to parse any Netlify-CMS generated markdown fields as described [here](https://github.com/gridsome/gridsome/issues/514).
 
 ## Caveats
 
-- Limited to components in the `/src/pages` directory.
 - Only works with Gridsome page-queries, not static-queries.
 - Must use the `/static` directory so images are available in the same location for the image widget preview.
 
 
-## Markdown issues with Netlify
+## Related
 
-- https://github.com/gridsome/gridsome/issues/530
-- https://github.com/gridsome/gridsome/issues/514
 - https://github.com/gridsome/gridsome/issues/445
-
-
-## Image issues with Netlify
-
 - https://github.com/gridsome/gridsome/issues/292
+- https://github.com/gridsome/gridsome/issues/285
 - https://github.com/gridsome/gridsome/issues/137
-- https://github.com/gridsome/gridsome/issues/459
-- https://github.com/gridsome/gridsome/issues/60
 
 
-## Reference
-
-- [transformer-yamljson](https://github.com/namoda378/transformer-yamljson)
-- [gridsome-transformer-docutils](https://github.com/vberlier/gridsome-transformer-docutils)
-- [gridsome-plugin-netlify-cms-paths](https://github.com/tyrion/gridsome-plugin-netlify-cms-paths)
 - [fix-netlify-cms-paths-on-gridsome](https://germano.dev/fix-netlify-cms-paths-on-gridsome)
+- [gridsome-plugin-netlify-cms-paths](https://github.com/tyrion/gridsome-plugin-netlify-cms-paths)
+- [transformer-yamljson](https://github.com/namoda378/transformer-yamljson)
