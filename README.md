@@ -22,17 +22,17 @@ Netlify-CMS generated markdown widget fields are then parsed as is described [he
 
 ## Install
 
-__*Do not install the official '@gridsome/transformer-yaml' package.*__
+__*Do not install the official '@gridsome/transformer-yaml' package.*__ If it is already installed in your `package.json` you must remove before using this plugin.
 
-- `yarn add gridsome-transformer-netlify`
-- `npm install gridsome-transformer-netlify`
+`yarn add gridsome-transformer-netlify` or `npm install gridsome-transformer-netlify`
+
 
 ## Usage
 
 1. Add the transformer plugin and any YAML data sources to your `gridsome-config.js` file:
 ```
 module.exports = {
-  transformers:
+  transformers: {
     netlify:{},
   },
   plugins: [
@@ -99,25 +99,6 @@ section2:
     Section 2 body text.
 ```
 
-<<<<<<< HEAD
-=======
-In your `<template>`:
-```
-<g-image :src="home.section1.image" />
-```
-
-
-## About
-
-This transformer changes the path of all Netlify-CMS generated YAML image fields, to the relative path (*from `/src/pages`*) of the `/static` directory.
-
-- Netlify-CMS image widget outputs a path with a leading `/`.
-- Gridsome `<g-image>` requires a relative path for the image src.
-
-Using this custom transformer plugin to change the image path __*before*__ it's inserted into GraphQL allows `<g-image>` to function correctly with the image paths generated from Netlify-CMS. Image previews in the Netlify-CMS dashboard should work correctly as well.
-
-[Marked](https://www.npmjs.com/package/marked) is then used to parse any Netlify-CMS generated markdown fields as described [here](https://github.com/gridsome/gridsome/issues/514).
->>>>>>> 74cc35e6d9ccdb6378a1963aeba7abe433ec24f6
 
 ## Caveats
 
