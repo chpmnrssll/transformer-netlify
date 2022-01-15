@@ -20,6 +20,6 @@
   "dependencies": {
     "flat": "^4.1.0",
     "js-yaml": "^3.13.1",
-    "marked": "^0.7.0"
+    "marked": "^4.0.10"
   }
 }
