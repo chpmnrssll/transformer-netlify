@@ -18,7 +18,7 @@
   "repository": "github:chpmnrssll/transformer-netlify",
   "main": "index.js",
   "dependencies": {
-    "flat": "^4.1.0",
+    "flat": "^5.0.1",
     "js-yaml": "^3.13.1",
     "marked": "^0.7.0"
   }
